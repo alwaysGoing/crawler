@@ -10,10 +10,10 @@ print(response.status)
 print(response.getheaders())
 print(response.getheader('Server'))
 
-# # 测试data参数
-# data = bytes(urllib.parse.urlencode({'word': 'hello'}), encoding='utf-8')
-# response = urllib.request.urlopen('http://httpbin.org/post', data=data)
-# print(response.read())
+# 测试data参数
+data = bytes(urllib.parse.urlencode({'word': 'hello'}), encoding='utf-8')
+response = urllib.request.urlopen('http://httpbin.org/post', data=data)
+print(response.read())
 
 # # 测试timeout参数, 单位为秒
 # response = urllib.request.urlopen('http://httpbin.org/get', timeout=0.1)
